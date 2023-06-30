@@ -9,5 +9,7 @@
     <hr>
     {% for blogs in blogs %}
         <h3><a href="{% url 'detail' blogs.id %}">{{ blogs.title }}</a></h3>
-    {% endfor %}
+        <p>{{ blogs.pub_date }}</p>
+        <p>{{ blogs.body }}</p>
+        {% endfor %}
 {% endblock %}
